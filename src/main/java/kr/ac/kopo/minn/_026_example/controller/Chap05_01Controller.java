@@ -1,4 +1,4 @@
-package kr.ac.kopo.minn._026example.controller;
+package kr.ac.kopo.minn._026_example.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
