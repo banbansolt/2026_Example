@@ -1,6 +1,5 @@
 package kr.ac.kopo.minn._026_example.controller;
 
-
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -62,5 +61,15 @@ public class Chap10_01Controller {
         }
 
         return "viewPage10_02";
+    }
+
+    @GetMapping("/exam03")
+    public String requestMethod8(Model model){
+        return "viewPage10_03";
+    }
+
+    @GetMapping("/manager/tag")
+    public String requestMethod9(Model model){
+        return "viewPage10_03";
     }
 }
