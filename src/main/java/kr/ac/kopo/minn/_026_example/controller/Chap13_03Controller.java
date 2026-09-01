@@ -12,7 +12,7 @@ public class Chap13_03Controller {
     public Person showJsonTypeData(){
         Person person = new Person();
         person.setName("PolyKim");
-        person.setAge("30");
+        person.setAge(20);
         person.setEmail("polykim@kopo.ac.kr");
         System.out.println(person);
         return person;

@@ -14,7 +14,7 @@ public class Chap13_04Controller {
     public Person showJsonTypeData(){
         Person person = new Person();
         person.setName("PolyPark");
-        person.setAge("30");
+        person.setAge(30);
         person.setEmail("polypark@kopo.ac.kr");
         System.out.println(person);
         return person;
