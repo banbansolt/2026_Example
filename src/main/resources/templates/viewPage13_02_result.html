@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>(JSON)RESTful 웹 서비스 예제 입력 폼</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        function myMethod()
+        {
+            var form1 = document.form1;
+            var obj = new Object();
+            obj.name = form1.name.value;
+            obj.age = form1.age.value;
+            obj.email = form1.email.value;
+            var jsonData = JSON.stringify(obj);
+
+            $.ajax({
+                type: "POST",
+                url: "/exam13_02",
+                data: jsonData,
+                contentType: "application/json; charset=UTF-8",
+                success: function (data)
+                {
+                    alert("success!\n" + data + "\n" + jsonData);
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    alert("Fail! " + textStatus);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<h2>JSON 데이터 전송</h2>
+
+<form method="post" name="form1">
+    <p>이름: <input type="text" name="name"></p>
+    <p>나이: <input type="text" name="age"></p>
+    <p>이메일: <input type="text" name="email"></p>
+    <p>
+        <input type="button" value="전송" onclick="myMethod()">
+    </p>
+</form>
+</body>
+</html>
